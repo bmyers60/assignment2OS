@@ -1,0 +1,11 @@
+The bankers algorithm takes in a table to see the initial state and available resources based on the table given in the assignment.
+The printMatrix function is used to show quickly see available resource values, which i found very useful for debugging. 
+updateAvailable shows how many resources are available once a process starts/finishes
+isRowLess is used to confirm that the proccesses required resources are less than the available resources since otherwise it will not be able to execute
+getProccessRow is used to pull a row from the matric relating to the specific process being requested to be used in the isRowLess function
+
+vectors were used to represent the individual rows since it made it easier to work with, but arrays were used to represent the full matrices.
+
+The failed processes are revisited in a FIFO order
+
+At the end it is confirmed that the queue is empty and if it is the safe sequence is returned (which is P1 P3 P4 P0 P2) or if it is not empty it will be returned as not a safe sequence
